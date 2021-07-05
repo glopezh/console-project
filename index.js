@@ -1,15 +1,7 @@
-const inquirer = require ('inquirer');
+const fetch = require("node-fetch");
 
-inquirer.prompt({
-
-    type:'password',
-    name: 'colors',
-    message: 'Password:',
-    mask:"?"
-})
-
-//Si queremos que continue con algo
-
-.then(answers =>{
-    console.log('Answer:',answers)
-})
+( async()=>{
+    const resp = await fetch("http://localhost:3001/articulos");
+    const articulos = await resp.json();
+    console.log(articulos);
+})();

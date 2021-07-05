@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.1.1"
+    "express": "^4.17.1",
+    "inquirer": "^8.1.1",
+    "morgan": "^1.10.0",
+    "node-fecth": "^0.0.1-security",
+    "node-fetch": "^2.6.1"
   }
 }
