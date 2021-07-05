@@ -2,7 +2,7 @@ const inquirer = require ('inquirer');
 
 inquirer.prompt({
 
-    type:'list',
+    type:'checkbox',
     name: 'colors',
     message: 'which are your favorite color?',
     choices: ['red','blue','green']
