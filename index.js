@@ -1,9 +1,11 @@
 const inquirer = require ('inquirer');
 
 inquirer.prompt({
-    name: 'color',
-    message: 'What is your favorite color?',
-    default:'red'
+
+    type:'list',
+    name: 'colors',
+    message: 'which are your favorite color?',
+    choices: ['red','blue','green']
 })
 
 //Si queremos que continue con algo
