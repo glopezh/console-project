@@ -2,10 +2,10 @@ const inquirer = require ('inquirer');
 
 inquirer.prompt({
 
-    type:'checkbox',
+    type:'password',
     name: 'colors',
-    message: 'which are your favorite color?',
-    choices: ['red','blue','green']
+    message: 'Password:',
+    mask:"?"
 })
 
 //Si queremos que continue con algo
