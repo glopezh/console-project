@@ -5,3 +5,4 @@ const fetch = require("node-fetch");
     const articulos = await resp.json();
     console.log(articulos);
 })();
+//node .
