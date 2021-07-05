@@ -1,5 +1,6 @@
 require("dotenv").config();
 const fetch = require("node-fetch");
+const inquirer = require("inquirer");
 
 const urlAPI =process.env.URL_API;
 
@@ -27,3 +28,32 @@ const crearArticulo = async(articulo) => {
 const nuevoArticulo = await resp.json();
 
 };
+
+const preguntaUsuario = async () => {
+    const respuestas = await inquirer.prompt([
+        {
+            name: "accion",
+            type: "list",
+            message: "Que quieres hacer?",
+            choices: [
+                {
+                    value: "cargar",
+                    name: "Listar un articulo",
+                },
+                {
+                    value: "crear",
+                    name: "Crear un articulo",
+                },
+                {
+                    value: "borrar",
+                    name: "Borrar un articulo",
+                },
+            ],
+        },
+    ]);
+    console.log(respuestas);
+};
+
+module.exports = preguntaUsuario();
+
+
